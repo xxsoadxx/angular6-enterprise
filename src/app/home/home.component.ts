@@ -26,11 +26,24 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.scope = this.ScopeService.getScope();
 
-      this.viewForm = this.formBuilder.group({
-          nombre: ['', Validators.required],
-          apellido: ['', Validators.required],
-          cedula: ['', [Validators.required , ValidateCI ]]
-      });
+    this.viewForm = this.formBuilder.group({
+        nombre: ['', Validators.required],
+        apellido: ['', Validators.required],
+        cedula: ['', [Validators.required , ValidateCI ]],
+        radiobutton1: [''],
+        radiobutton2: ['']
+    });
+    this.onChanges();
+  }
+
+  onChanges(): void {
+    console.log('onChanges ')
+    this.viewForm.get('radiobutton1').valueChanges.subscribe(val => {
+     if(val)this.viewForm.controls.radiobutton2.setValue(false);
+    });
+    this.viewForm.get('radiobutton2').valueChanges.subscribe(val => {
+      if(val)this.viewForm.controls.radiobutton1.setValue(false);
+    });
   }
   
   get f() { return this.viewForm.controls; }

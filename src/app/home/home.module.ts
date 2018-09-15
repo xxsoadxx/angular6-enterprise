@@ -8,6 +8,7 @@ import { HomeComponent } from './home.component';
 import { ComboboxComponent } from '../common/combobox/combobox.component';
 import { OnlyNumber } from '../common/onlynumbers/onlynumbers.directive';
 import { CiFormat } from '../common/ciformat/ciformat.directive';
+import { DateFormat } from '../common/dateformat/dateformat.directive';
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ import { CiFormat } from '../common/ciformat/ciformat.directive';
     ReactiveFormsModule
   ],
   declarations: [
-    HomeComponent,ComboboxComponent,OnlyNumber,CiFormat
+    HomeComponent,ComboboxComponent,OnlyNumber,CiFormat,DateFormat
   ],
   providers: [
 

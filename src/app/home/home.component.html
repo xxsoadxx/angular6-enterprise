@@ -19,7 +19,7 @@
           <div class="col-4">
               <div>
                   <h1 class="label">Cédula de Identidad</h1>
-                  <input class="input-gray" id="cedula" formControlName="cedula" placeholder="1.234.567-8" type="text"  OnlyNumber="true" CiFormat />
+                  <input class="input-gray" id="cedula" formControlName="cedula" placeholder="1.234.567-8" type="text"  OnlyNumber="true"  maxlength="9"  CiFormat />
                  
               </div>
           </div>
@@ -35,7 +35,7 @@
           <div class="col-4 right-padding">
               <div>
                   <h1 class="label">Fecha de Nacimiento</h1>
-                  <input class="input-gray datepicker" maxlength="8" id="date" name="date" placeholder="DD/MM/AAAA" type="text" />
+                  <input class="input-gray datepicker" maxlength="8" id="date" name="date" OnlyNumber="true"  maxlength="10" placeholder="DD/MM/AAAA" type="text" DateFormat />
                   <i class="fa fa-calendar-alt fa-2x calendar" aria-hidden="true"></i>
               </div>
           </div>
@@ -47,11 +47,11 @@
               <div>
                   <legend class="label">Género</legend>
                   <div class="margin-left">
-                      <input class="input-radio1" name="genero" id="masculino" type="radio" />
+                      <input class="input-radio1" formControlName="radiobutton1" name="radiobutton1" id="masculino" type="checkbox" />
                       <label for="masculino" class="label">Masculino</label>
                   </div>
                   <div class="margin-left">
-                      <input class="input-radio1" name="genero" id="femenino" type="radio" />
+                      <input class="input-radio1" formControlName="radiobutton2" name="radiobutton2" id="femenino" type="checkbox" />
                       <label for="femenino" class="label">Femenino</label>
                   </div>
               </div>

@@ -6,6 +6,7 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
 
 export class OnlyNumber {
+
     private el: any;
 
     regexStr = '^[0-9]*$';
@@ -18,6 +19,7 @@ export class OnlyNumber {
     @HostListener('keydown', ['$event']) onKeyDown(event:KeyboardEvent) {
 
       let e = <KeyboardEvent> event;
+      
       if (this.OnlyNumber) {
           console.log(e.keyCode);
           if ([46, 8, 9, 27, 13, 110].indexOf(e.keyCode) !== -1 ||
@@ -37,7 +39,7 @@ export class OnlyNumber {
         let ch = String.fromCharCode(e.keyCode);
         let regEx =  new RegExp(this.regexStr);    
 
-        if(e.keyCode == 190 ) {
+        if(e.keyCode == 190) {
             e.preventDefault();
         }
         if(regEx.test(ch))

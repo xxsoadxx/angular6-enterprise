@@ -1,0 +1,11 @@
+<div class="menu-box">
+    <table id="my-table">
+        <tr>
+            <td *ngFor="let item of steps" [routerLink]=[item.View] [routerLinkActive]="['is-active']" skipLocationChange class="no-active">
+                <a [routerLink]=[item.View] skipLocationChange>
+                    <span class="">{{ item.Order }}. {{ item.Title }}</span>
+                </a>    
+            </td>
+        </tr>
+    </table>
+</div>

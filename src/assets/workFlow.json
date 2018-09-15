@@ -1,0 +1,37 @@
+[
+    {
+        "FormTitle": "Formulario de Aplicación para Préstamos",
+        "Steps": [
+            {
+                "Order": 1,
+                "Title": "Datos de Solicitud",
+                "View": "home"
+            },
+            {
+                "Order": 2,
+                "Title": "Datos Personales",
+                "View": "step2"
+            },
+            {
+                "Order": 3,
+                "Title": "Datos de Empleo",
+                "View": "view3"
+            },
+            {
+                "Order": 4,
+                "Title": "Referencias",
+                "View": "view4"
+            },
+            {
+                "Order": 5,
+                "Title": "Verificación",
+                "View": "view5"
+            },
+            {
+                "Order": 6,
+                "Title": "Confirmación",
+                "View": "view6"
+            }
+        ]
+    }
+]

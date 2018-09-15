@@ -15,3 +15,212 @@
 
 // Theme customization
 @import "theme/theme";
+
+
+/*IE9*/
+img::selection 
+{
+    background-color:transparent;
+} 
+img::-moz-selection
+{
+    background-color:transparent;
+}
+img
+{        
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    /*IE10*/
+    -ms-user-select: none;
+    user-select: none;
+
+    /*You just need this if you are only concerned with android and not desktop browsers.*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}    
+
+a, u {
+    text-decoration: none !important;
+}
+
+
+.subtitle {
+    font-weight: 200;
+    color: #444444;
+    border-bottom: 1px solid #e6e6e6;
+    height: 46px;
+    margin-top: 11px;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.row{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.col-12 {
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    box-sizing: border-box;
+}
+
+.col-9{
+    max-width: 75%;
+    position: relative;
+    width: auto;
+    min-height: 1px;
+    box-sizing: border-box;
+}
+
+.col-6 {
+    max-width: 50%;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 1px;
+}
+
+.col-4 {
+    max-width: 33%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    box-sizing: border-box;
+}
+
+.col-3 {
+    max-width: 25%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    box-sizing: border-box;
+}
+
+
+.primary-button{
+    width:365px;
+    height:75px;
+    background-color: #FF0000;
+    text-align: center;
+    font-size: 22px;
+    color:white;
+    border:0px;
+    cursor: pointer;
+ }
+
+ .align-right {
+     text-align: right;
+ }
+ 
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+
+
+.label {
+    font-weight: 200;
+    color: #444444;
+    margin-bottom: 10px;
+    font-size: 24px;
+ }
+
+ 
+.input-gray {
+    border: 2px solid #D3D3D3;
+    height: 50px;
+    display: block;
+    width: calc(100% - 29px);
+    padding-left: 29px;
+    font-weight: 200;
+    color: #444444;
+    font-size: 22px;
+}
+
+.input-gray::placeholder {
+    color: #8C8C8C !important;
+    font-size: 22px;
+}
+
+
+.input-radio1{
+    border-radius: 60px;
+    border: 2px solid #ABABAB;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    width: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+  }
+  
+  .input-radio1 ~ .label {
+      position: relative;
+      bottom: 5px;
+  }
+
+  .input-radio1::after {
+    border-radius: 130px;
+    content: '';
+    display: block;
+    height: 16px;
+    left: calc(50% - 8px);
+    position: relative;
+    top: calc(50% - 8px);
+    width: 16px;
+  }
+  
+  .input-radio1:checked:after {
+    background-color: #FF0000;
+  }
+
+  .input-radio2{
+    border-radius: 60px;
+    border: 2px solid white;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    width: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+  }
+  
+  .input-radio2 ~ .label {
+      position: relative;
+      bottom: 5px;
+  }
+
+  .input-radio2::after {
+    border-radius: 130px;
+    content: '';
+    display: block;
+    height: 16px;
+    left: calc(50% - 8px);
+    position: relative;
+    top: calc(50% - 8px);
+    width: 16px;
+  }
+  
+  .input-radio2:checked:after {
+    background-color: white;
+  }
+
+  .calendar {
+    position: relative;
+    top: -41px;
+    float: right;
+    right: 39px;
+    color: #b0b0b0;
+  }

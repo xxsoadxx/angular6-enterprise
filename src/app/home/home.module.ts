@@ -1,26 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from '@app/core';
-import { SharedModule } from '@app/shared';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { QuoteService } from './quote.service';
+import { ComboboxComponent } from '../common/combobox/combobox.component';
+import { OnlyNumber } from '../common/onlynumbers/onlynumbers.directive';
+import { CiFormat } from '../common/ciformat/ciformat.directive';
 
 @NgModule({
   imports: [
     CommonModule,
     TranslateModule,
     CoreModule,
-    SharedModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [
-    HomeComponent
+    HomeComponent,ComboboxComponent,OnlyNumber,CiFormat
   ],
   providers: [
-    QuoteService
+
   ]
 })
 export class HomeModule { }

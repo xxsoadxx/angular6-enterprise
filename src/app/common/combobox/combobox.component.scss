@@ -1,0 +1,130 @@
+/* ComboNuevo*/
+
+ul#menu,  .borderfix ul#menu{ 
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+    background: transparent;
+    color: #6f6f6f;
+    height: 52px;
+    border: 2px solid #D3D3D3;
+  }
+  
+  ul#menu > li{
+     height: 50px;
+     list-style-type:none;
+  }
+  
+  .dropdown-combo > li > label{
+    transition: background 0.3s;
+    cursor: pointer;
+    height: 36px;
+    margin: 0px;
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 30px);
+    font-family: Open Sans;
+    font-weight: 200;
+    padding-top: 10px;
+    font-size: 21px;
+    padding-left: 30px;
+  }
+  
+  .dropdown-combo > li > label:after{
+    content:"";
+    position:absolute;
+    display: none;
+    top:50%;
+    right:5px;
+    width:0;
+    height:0;
+    border-top:4px solid rgba(255,255,255,.5);
+    border-bottom:0 solid rgba(255,255,255,.5);
+    border-left:4px solid transparent;
+    border-right:4px solid transparent;
+    transition:border-bottom .1s, border-top .1s .1s;
+    }
+  
+    .dropdown-combo label:hover,
+    .dropdown-combo input:checked ~ label{}
+  
+    .dropdown-combo input:checked ~ .dropdown-combo label:after{
+    border-top:0 solid rgba(255,255,255,.5);
+    border-bottom:4px solid rgba(255,255,255,.5);
+    transition:border-top .1s, border-bottom .1s .1s;
+  }
+  
+  /*hide the inputs*/
+  .dropdown-combo input{display:none}
+  
+  /*show the second levele menu of the selected voice*/
+  .dropdown-combo input:checked ~ ul.submenu{
+    padding-bottom: 7px;
+    max-height:1000px;
+    transition:max-height 0.2s ease-in;
+  }
+  
+  /*style for the second level menu*/
+  ul.submenu{
+    max-height:0;
+    padding:0;
+    overflow:hidden;
+    list-style-type:none;
+    background: white;
+    transition:max-height 0.2s ease-out;
+    position: relative;
+    /* width: 487px; */
+    top: -1px;
+    width: calc(100% + 4px);
+    left: -2px;
+    z-index: 50;
+    padding-bottom: 0px;
+
+
+  }
+  
+  ul.submenu li a{
+    display:block;
+    padding:12px;
+    color: #6f6f6f;
+    text-decoration:none;
+    transition: background .3s;
+    white-space:nowrap;
+    cursor: pointer;
+  }
+  
+  ul.submenu li a:hover{
+    background: #f0f0f0;;
+  }
+
+  .submenu li {
+        border: 2px solid #D3D3D3;
+        height: 44px;
+        /* border-left: 4px solid #063984; */
+        /* border-radius: 4px; */
+        border-bottom: none;
+        border-top: 1px solid #D3D3D3;
+  }
+
+  .submenu li:last-child{
+      border-bottom: 2px solid #D3D3D3;  
+  }
+
+  .submenu input:checked ~ ul.submenu{
+    max-height:1000px;
+    transition:max-height 0.5s ease-in;
+  }
+
+  
+  .selectarrow {
+    position: relative;
+    bottom: 21px;
+    left: calc(100% - 41px);
+    background: transparent;
+    border-top: 2px solid #c7c7c7;
+    border-left: 2px solid #c7c7c7;
+    transform: rotate(-135deg);
+    width: 13px;
+    height: 13px;
+}
+ 

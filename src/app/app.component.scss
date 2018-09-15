@@ -1,0 +1,33 @@
+.back-img {
+    position: absolute;
+    top: 122px;
+    z-index: 1;
+}
+
+.container-flow {
+    z-index: 10;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    max-width: 1369px;
+    width: 100%;
+    top: 55px;
+    box-shadow: 0px 3px 2px 2px #f4f4f4;
+
+    animation: fadeInDownBig;
+    animation-duration: 1.5s;
+
+}
+
+.main-container {
+    padding-top: 53px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    margin-bottom:50px;
+}
+
+
+
+

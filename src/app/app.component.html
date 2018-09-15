@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<img src="assets/img/back.png" class="back-img" >
+
+<div class="container-flow">
+        {{ scope.step.Title }}
+    <app-header [title]="scope.selectedFlow.FormTitle"></app-header>
+    <app-stepsmenu [steps]="scope.selectedFlow.Steps" ></app-stepsmenu>
+    <div class="main-container">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+

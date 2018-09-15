@@ -32,7 +32,9 @@
             "styles": [
               "src/main.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/ci_validator.js"
+            ]
           },
           "configurations": {
             "production": {

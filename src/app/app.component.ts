@@ -7,6 +7,8 @@ import { filter, map, mergeMap } from 'rxjs/operators';
 
 import { environment } from '@env/environment';
 import { Logger, I18nService } from '@app/core';
+import * as json from 'assets/workFlow.json';
+import { ScopeService } from './services/scope.service';
 
 const log = new Logger('App');
 
@@ -16,14 +18,38 @@ const log = new Logger('App');
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-
+  scope: any;
+  selectedFlow:any;
+  step:any;
+  
   constructor(private router: Router,
               private activatedRoute: ActivatedRoute,
               private titleService: Title,
               private translateService: TranslateService,
-              private i18nService: I18nService) { }
+              private i18nService: I18nService,
+              private ScopeService: ScopeService) { 
+
+                
+                
+                
+              }
+
+  getFlow() {
+    
+    if(localStorage.getItem('LocalMessage') !== "" && localStorage.getItem('LocalMessage') !== null){
+      
+    }else{
+      this.scope = {};
+      this.scope.selectedFlow = json[0];
+      this.scope.step = this.scope.selectedFlow.Steps[0];
+      this.ScopeService.setScope(this.scope);
+    }
+  }      
 
   ngOnInit() {
+    
+    this.getFlow();
+    
     // Setup logger
     if (environment.production) {
       Logger.enableProductionMode();

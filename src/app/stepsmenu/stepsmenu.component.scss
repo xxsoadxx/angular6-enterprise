@@ -1,0 +1,21 @@
+
+.menu-box {
+    height: 56px;
+}
+
+#my-table{width:100%;border-collapse:collapse;top: 16px;position: relative;} /*or whatever width you want*/
+#my-table td{height: 31px;width:2000px;padding:4px;font-size: 19px;top: 13px;border-bottom: 3px solid #d2d2d2;text-align: center;} /*something big or 100%*/
+#my-table td > a {
+    cursor: default;
+}
+#my-table td > a > span {
+    color: #d2d2d2;
+}
+
+.is-active > a > span {
+    color:black !important;
+}
+
+.is-active {
+    border-bottom: 3px solid red !important;
+}

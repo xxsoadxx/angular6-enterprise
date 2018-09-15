@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { extract } from '@app/core';
-import { HomeComponent } from './home.component';
+import { Step2Component } from './step2.component';
 
 const routes: Routes = [
-    { path: 'home', component: HomeComponent, data: { title: extract('Home') } }
+    { path: 'step2', component: Step2Component, data: { title: extract('Home') } }
 ];
 
 @NgModule({
@@ -13,4 +13,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class HomeRoutingModule { }
+export class Step2RoutingModule { }

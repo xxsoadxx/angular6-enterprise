@@ -30,6 +30,9 @@ ul#menu,  .borderfix ul#menu{
     padding-left: 30px;
   }
   
+  .dropdown-combo {
+    cursor: pointer;
+  }
   .dropdown-combo > li > label:after{
     content:"";
     position:absolute;

@@ -1,15 +1,13 @@
-<ul id="menu" class="dropdown-combo"> 
+<ul id="menu" class="dropdown-combo" (click)="fnCombo()" click-stop-propagation > 
     <li> 
-      <input id="comboOpen" name="menu" type="checkbox" /> 
-      <label for="comboOpen" >Seleccione</label> 
+      <input id="comboOpen" name="menu" [(ngModel)]="theCheckbox" type="checkbox" /> 
+      <label tabindex="0" (blur)="closeCombo()" (click)="fnCombo()" click-stop-propagation >{{ selected.Desc }}</label>
+      
       <div class="selectarrow"></div>
       <ul class="submenu">
-          <li><a>Valor 1</a></li> 
-          <li><a>Valor 2</a></li> 
-          <li><a>Valor 3</a></li> 
-          <li><a>Valor 4</a></li> 
-          <li><a>Valor 5</a></li> 
-          <li><a>Valor 6</a></li> 
+          
+          <li *ngFor="let item of options" (click)="select(item)" click-stop-propagation ><a>{{ item.Desc }}</a></li> 
+         
       </ul>
     </li>
 </ul>

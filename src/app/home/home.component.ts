@@ -31,13 +31,13 @@ export class HomeComponent implements OnInit {
         apellido: ['', Validators.required],
         cedula: ['', [Validators.required , ValidateCI ]],
         radiobutton1: [''],
-        radiobutton2: ['']
+        radiobutton2: [''],
+        combo1: ['']
     });
     this.onChanges();
   }
 
   onChanges(): void {
-    console.log('onChanges ')
     this.viewForm.get('radiobutton1').valueChanges.subscribe(val => {
      if(val)this.viewForm.controls.radiobutton2.setValue(false);
     });
@@ -49,14 +49,8 @@ export class HomeComponent implements OnInit {
   get f() { return this.viewForm.controls; }
 
   continuar() {
-   
-        //call function
-       
-       
-     
-     
-
       this.viewForm.controls.nombre.setValue("Santiago");
+      console.log(this.f.combo1.value);
       console.log(this.f.nombre.value);
       console.log(this.f.apellido.value);
 
